@@ -24,7 +24,7 @@ var Messages = {
       callback(Messages.items());
     }
   },
- 
+
   _conform: function(message) {
     // ensure each message object conforms to expected shape
     message.text = message.text || '';
