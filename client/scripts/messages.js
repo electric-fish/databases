@@ -14,12 +14,15 @@ var Messages = {
 
   update: function(messages, callback = ()=>{}) {
     var length = Object.keys(Messages._data).length;
+    console.log('messages in Messages.update: ', Messages._data);
 
     for (let message of messages) {
       Messages._data[message.objectId] = Messages._conform(message);
+      console.log(Messages._data[message.objectId]);
     }
 
     // only invoke the callback if something changed
+    // debugger;
     if (Object.keys(Messages._data).length !== length) {
       callback(Messages.items());
     }
