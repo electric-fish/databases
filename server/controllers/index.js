@@ -16,12 +16,12 @@ module.exports = {
 
       messagesAsync(req)
         .then((results) => {
-          console.log("This is promise in controller ", results);
+          // console.log("This is promise in controller ", results);
           res.write(JSON.stringify(results));
           res.end();
         })
         .catch((err) => {
-          console.log(err);
+          // console.log(err);
           throw err;
         });
     }, // a function which handles a get request for all messages
